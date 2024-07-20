@@ -19,7 +19,7 @@ export const ContactsForm = () => {
       tel: tel, 
       saved: false,
     }))
-    e.currentTarget.reset();
+    e.currentTarget.reset()
   }
 
   return (
