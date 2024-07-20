@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-redux-hw/static/css/main.2cdf07e3.css",
+    "main.js": "/react-redux-hw/static/js/main.afb6d728.js",
+    "index.html": "/react-redux-hw/index.html",
+    "main.2cdf07e3.css.map": "/react-redux-hw/static/css/main.2cdf07e3.css.map",
+    "main.afb6d728.js.map": "/react-redux-hw/static/js/main.afb6d728.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2cdf07e3.css",
+    "static/js/main.afb6d728.js"
+  ]
+}
