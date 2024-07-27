@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { deleteContacts, toggleSaved } from "../../redux/contactsSlice";
+import { deleteContacts, toggleContacts } from "../../redux/operations";
 import { RxCross2 } from "react-icons/rx";
 import { FiPlusSquare } from "react-icons/fi";
 import styles from './Contact.module.css'
@@ -8,11 +8,11 @@ export const Contact = ({ contact }) => {
   const dispatch = useDispatch()
 
   const handleDelete = () => {
-    dispatch(deleteContacts(contact.id))
+    dispatch(deleteContacts(contact))
   }
 
   const handleToggleSaved = () => {
-    dispatch(toggleSaved(contact.id))
+    dispatch(toggleContacts(contact))
   }
 
   return (

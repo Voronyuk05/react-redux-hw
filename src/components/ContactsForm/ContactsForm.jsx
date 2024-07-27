@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { addContacts } from "../../redux/contactsSlice";
+import { addContacts } from "../../redux/operations";
 import { Button } from "components/Button/Button";
 import styles from "./ContactsForm.module.css"
 import { nanoid } from "nanoid";
@@ -14,7 +14,7 @@ export const ContactsForm = () => {
     const tel = e.currentTarget.elements.tel.value
 
     dispatch(addContacts({
-      id: nanoid,
+      id: nanoid(),
       name: name, 
       tel: tel, 
       saved: false,

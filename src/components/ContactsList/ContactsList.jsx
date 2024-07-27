@@ -12,7 +12,7 @@ export const ContactsList = () => {
     const searchedContacts =  contacts.filter(contact => contact.name.includes(filter.query) || contact.tel.includes(filter.query));
     switch (filter.saved) {
       case statusFilters.saved:
-        return searchedContacts.filter(contact => !contact.saved);
+        return searchedContacts.filter(contact => contact.saved);
       default:
         return searchedContacts;
     }
