@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { deleteContacts, toggleContacts } from "../../redux/operations";
+import { deleteContacts, toggleContacts } from "../../../redux/operations";
 import { RxCross2 } from "react-icons/rx";
 import { FiPlusSquare } from "react-icons/fi";
 import styles from './Contact.module.css'

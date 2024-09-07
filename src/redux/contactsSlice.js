@@ -41,7 +41,10 @@ const contactsSlice = createSlice({
             state.isLoading = false
             state.error = null
             const idx = state.items.findIndex((item) => item.id === action.payload.id)
-            state.items.splice(idx, 1)
+            console.log(idx);
+            console.log(state.items.splice(idx, 1));
+            
+            state.items.filter(item => item.id !== action.payload.id);
         })
         .addCase(deleteContacts.rejected, (state, action) => {
             state.error = action.payload

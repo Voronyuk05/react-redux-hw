@@ -1,8 +1,9 @@
 import { useDispatch } from "react-redux";
-import { addContacts } from "../../redux/operations";
-import { Button } from "components/Button/Button";
+import { addContacts } from "../../../redux/operations";
+import { Button } from "../../Button/Button";
 import styles from "./ContactsForm.module.css"
 import { nanoid } from "nanoid";
+import { Input } from "components/Input/Input";
 
 export const ContactsForm = () => {
   const dispatch = useDispatch()
@@ -24,15 +25,13 @@ export const ContactsForm = () => {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <input
-        className={styles.field}
+      <Input
         id="name"
         type="text"
         name="text"
         placeholder="Enter contact name..."
       />
-      <input
-        className={styles.field}
+      <Input
         id="tel"
         type="text"
         name="text"

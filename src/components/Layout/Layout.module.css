@@ -1,8 +1,13 @@
 .container {
     display: grid;
     gap: 16px;
-    max-width: 800px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 16px;
+    hr {
+        height: 1px;
+        background-color: rgb(141, 139, 139);
+        width: 100%;
+    }
 }
   

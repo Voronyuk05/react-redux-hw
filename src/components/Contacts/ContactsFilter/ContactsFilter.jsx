@@ -1,7 +1,8 @@
 import { useDispatch } from "react-redux";
-import { changeFilter, changeSavedFilter } from "../../redux/filterSlice";
-import { Button } from "components/Button/Button";
+import { changeFilter, changeSavedFilter } from "../../../redux/filterSlice";
+import { Button } from "../../Button/Button";
 import styles from "./ContactsFilter.module.css";
+import { Input } from "components/Input/Input";
 
 export const ContactsFilter = () => {
   const dispatch = useDispatch()
@@ -22,8 +23,7 @@ export const ContactsFilter = () => {
   return (
     <div className={styles.filters}>
       <form className={styles.form} onSubmit={handleChangeFilter}>
-        <input
-          className={styles.field}
+        <Input
           id="filter"
           type="text"
           name="text"

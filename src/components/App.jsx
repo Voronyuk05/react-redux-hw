@@ -1,23 +1,25 @@
 import { Layout } from "./Layout/Layout";
-import { ContactsFilter } from "./ContactsFilter/ContactsFilter";
-import { ContactsList } from "./ContactsList/ContactsList";
-import { ContactsForm } from "./ContactsForm/ContactsForm";
-import { getContacts } from "../redux/operations";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import { HomePage } from "pages/HomePage/HomePage";
+import { RegistrationPage } from "pages/RegistrationPage/RegistrationPage";
+import { LoginPage } from "pages/LoginPage/LoginPage";
+import { ContactsPage } from "pages/ContactsPage/ContactsPage";
+import { AppBar } from "./Auth/AppBar/AppBar";
 
 export const App = () => {
-  const dispatch = useDispatch()
-
-  useEffect(() => {
-    dispatch(getContacts())
-  }, [dispatch])
 
   return (
-    <Layout>
-      <ContactsFilter/>
-      <ContactsForm/>
-      <ContactsList/>
-    </Layout>
+    <>
+      <AppBar />
+      <Layout>
+        <hr />
+        <Routes>
+          <Route path="/" element={<HomePage/>} />
+          <Route path="/registration" element={<RegistrationPage/>}/>
+          <Route path="/login" element={<LoginPage/>}/>
+          <Route path="/contacts" element={<ContactsPage/>}/>
+        </Routes>
+      </Layout>
+    </>
   );
 };

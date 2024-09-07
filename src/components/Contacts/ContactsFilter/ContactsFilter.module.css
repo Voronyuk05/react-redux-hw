@@ -6,7 +6,9 @@
 
 .form {
     display: flex;
-    gap: 4px;
+    align-items: center;
+    
+    gap: 15px;
 }
 
 
